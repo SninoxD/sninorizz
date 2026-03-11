@@ -25,6 +25,360 @@
   width: 100%;
 }
 .rizz-form input[type="text"],
+.rizz-form textarea {
+  border: 1.5px solid #809bce;
+  border-radius: 8px;
+  padding: 0.7em 1em;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4ff;
+  color: #222;
+  transition: border 0.2s;
+}
+.rizz-form input[type="text"]:focus,
+.rizz-form textarea:focus {
+  border-color: #0a7952;
+  outline: none;
+}
+.rizz-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.rizz-form button[type="submit"] {
+  background: linear-gradient(135deg, #809bce 0%, #0a7952 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7em 2em;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(128,155,206,0.18);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.rizz-form button[type="submit"]:hover {
+  background: linear-gradient(135deg, #0a7952 0%, #809bce 100%);
+  box-shadow: 0 8px 24px rgba(10,121,82,0.18);
+}
+/* Roblox profile button styles */
+.roblox-profile-btn {
+  margin-top: 6px;
+  background: #809bce;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.35em 1em;
+  border-radius: 999px;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 1px 4px rgba(128,155,206,0.12);
+  transition: background 0.2s, box-shadow 0.2s;
+  display: inline-block;
+}
+.roblox-profile-btn:hover {
+  background: #0a7952;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(10,121,82,0.18);
+}
+/* Buy Me a Coffee button styles */
+.coffee-btn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: #ffdd00;
+  color: #222;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.7em 1.3em;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(255,221,0,0.15);
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  z-index: 100;
+  border: 2px solid #ffe066;
+}
+.coffee-btn:hover {
+  background: #ffe066;
+  box-shadow: 0 4px 16px rgba(255,221,0,0.25);
+}
+/* Custom header flex for profile and title */
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+}
+
+#roblox-profile-img {
+  border-radius: 50%;
+  border: 2px solid #333;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 2px 8px rgba(128,155,206,0.15);
+}
+
+.rizz-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg, #809bce 40%, #0a7952 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  padding-left: 2px;
+  text-align: left;
+  line-height: 1.1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #3392d6, #0a7952); /* your pastel blue theme stays */
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.layout-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  max-width: 800px;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2.4rem 1.6rem;
+  border-radius: 20px;
+  max-width: 480px;
+  width: 100%;
+  margin: 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 span {
+  color: #809bce;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 0.96rem;
+  opacity: 0.9;
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.5rem 0 2.5rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  background: rgba(255, 255, 255, 0.4);
+  color: #1a1a1a;
+  border: 2px solid transparent; /* transparent by default for clean look */
+  padding: 0.72rem 1.76rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* For Her - Pink when active */
+#category-her {
+  border-color: #e43087;
+  color: #cf115a; /* deeper pink text for contrast */
+}
+
+#category-her.active {
+  background: #be1aa5; /* friendly pastel pink */
+  color: white;
+  border-color: #ffadd4;
+  box-shadow: 0 6px 20px rgba(255, 173, 212, 0.5); /* pink glow */
+}
+
+/* For Him - Dark Blue when active */
+#category-him {
+  border-color: #2c5282;
+  color: #2c5282;
+}
+
+#category-him.active {
+  background: #2c5282;          /* nice dark blue */
+  color: white;
+  border-color: #2c5282;
+  box-shadow: 0 6px 20px rgba(44, 82, 130, 0.5); /* blue glow */
+}
+
+#rizz-box {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+  color: #111;
+  padding: 2rem;
+  border-radius: 16px;
+  min-height: 128px;
+  margin: 1.5rem 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.32rem;
+  line-height: 1.6;
+  font-weight: 700;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), inset 0 0 20px rgba(128, 155, 206, 0.15);
+  border: 2px solid rgba(128, 155, 206, 0.2);
+}
+
+#generate-btn {
+  background: linear-gradient(135deg, #254a8f 0%, #1e3a5f 100%);
+  color: white;
+  border: none;
+  padding: 1.04rem 3.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 12px 30px rgba(128, 155, 206, 0.6);
+}
+
+#generate-btn:hover {
+  background: linear-gradient(135deg, #1e3a5f 0%, #254a8f 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(128, 155, 206, 0.8);
+}
+
+.donation-board {
+  margin-top: 0;
+  padding: 0.96rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  max-width: 256px;
+  min-width: 255px;
+  opacity: 1;
+}
+
+.donation-board h2 {
+  font-size: 1.04rem;
+  margin-bottom: 0.8rem;
+  color: #2c5282;
+  text-align: center;
+  opacity: 0.9;
+}
+
+#donor-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: rank;
+}
+
+#donor-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.48rem;
+  margin-bottom: 0.32rem;
+  background: rgba(128, 155, 206, 0.1);
+  border-radius: 6px;
+  font-size: 0.68rem;
+  opacity: 0.85;
+}
+
+#donor-list li:nth-child(1) { background: linear-gradient(90deg, #FFD700, #FFD700); } /* gold */
+#donor-list li:nth-child(2) { background: linear-gradient(90deg, #C0C0C0, #C0C0C0); } /* silver */
+#donor-list li:nth-child(3) { background: linear-gradient(90deg, #CE8946, #CE8946); } /* bronze */
+
+.rank {
+  font-weight: 700;
+  min-width: 24px;
+  color: #2c5282;
+  font-size: 0.8rem;
+}
+
+.name {
+  flex: 1;
+  margin: 0 0.4rem;
+  font-weight: 600;
+  font-size: 0.68rem;
+}
+
+.amount {
+  font-weight: 700;
+  color: #d44179; /* pink for money pop */
+  min-width: auto;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.donate-note {
+  text-align: center;
+  margin-top: 0.64rem;
+  font-size: 0.64rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+  .layout-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .donation-board {
+    max-width: 100%;
+  }
+}.rizz-submit-board {
+  margin-top: 0;
+  padding: 0.96rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  max-width: 256px;
+  min-width: 224px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rizz-submit-board h2 {
+  font-size: 1.04rem;
+  margin-bottom: 0.8rem;
+  color: #0a7952;
+  text-align: center;
+  opacity: 0.9;
+}
+.rizz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100%;
+}
+.rizz-form input[type="text"],
 .rizz-form input[type="email"],
 .rizz-form textarea {
   border: 1.5px solid #809bce;
@@ -355,3 +709,4 @@ p {
     max-width: 100%;
   }
 }
+
