@@ -16,7 +16,7 @@ const rizzForHer = [
 ];
 
 const rizzForHim = [
-  "Roses are red our first date would lit, and if it goes well enough I could bounce on it.",
+  "Roses are red our first date would be lit, and if it goes well enough I could bounce on it.",
   "Violets are blue, your heart i would never break it may not be your birthday but i can still give you my cake.",
   "Grass is green and new york is a big city, how about netflix and chill to find out if its grippy.",
   "Feathers float and so does a boat, lets go somewhere private so you can itch the back of my throat.",
@@ -100,3 +100,4 @@ categoryHimBtn.addEventListener("click", () => setCategory(false));
 
 // Start with "For Her" selected and show one line immediately
 //setCategory(true);
+
