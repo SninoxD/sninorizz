@@ -70,4 +70,3 @@ categoryHimBtn.addEventListener("click", () => setCategory(false));
 
 // Start with "For Her" selected and show one line immediately
 //setCategory(true);
-
