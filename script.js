@@ -4,7 +4,7 @@ const rizzForHer = [
   "Violets are blue, to you I would never lie and if you had an OF I would subscribe.",
   "Roses are red I could cook you your favourite dish and the only reward I want is that chocolate starfish",
   "Your smile shines more that all the suns, and if you want i can remove you period cramps for 9 months.",
-  //"Roses are red i dont care about the fame and for you i would even pause my online game.",
+  "Roses are red Jeff Bezos got alot of cash, your not a burger but could you still let me smash?.",
   //"Do you believe in love at first sight, or should I walk by again?",
   "For you i would win any race, and instead of a trophy i want you to sit on my face.",
   //"Are you a parking ticket? You've got 'fine' written all over you.",
